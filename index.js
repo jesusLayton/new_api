@@ -7,7 +7,7 @@ app.use(express.json());
 
 // Ruta raíz
 app.get('/', (req, res) => {
-  res.send('👋 Hola, esta es mi primera API!');
+  res.send('Hola, esta es mi primera API!');
 });
 
 // Ruta que devuelve usuarios (simulados)
@@ -24,5 +24,5 @@ app.get('/usuarios', (req, res) => {
 // Puerto
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`✅ Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
