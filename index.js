@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 
+// Deshabilitar header X-Powered-By por seguridad
+app.disable('x-powered-by');
+
 // Middleware para leer JSON
 app.use(express.json());
 
