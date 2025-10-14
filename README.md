@@ -1,6 +1,7 @@
 # 🌐 Simple Node.js API – Deploy en Render
 
-![Security](https://img.shields.io/badge/Security-CWE--200%20Fixed-green?style=flat-square&logo=shield)
+![Security](https://img.shields.io/badge/Security-0%20vulnerabilities-brightgreen?style=flat-square&logo=shield)
+![Snyk](https://img.shields.io/badge/Snyk-Monitored-4C4A73?style=flat-square&logo=snyk)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-brightgreen?style=flat-square&logo=node.js)
 ![Status](https://img.shields.io/badge/Status-Production-success?style=flat-square)
 
@@ -70,8 +71,15 @@ El servidor se iniciará en: **http://localhost:3000**
 
 **📸 Evidencia de resolución:**
 
-![Vulnerabilidad Resuelta](vulnerabilidad-resuelta.jpg)
-*Captura que muestra la vulnerabilidad CWE-200 identificada y posteriormente solucionada en el código.*
+| Antes | Después |
+|-------|---------|
+| ![Vulnerabilidad Detectada](vulnerabilidad-resuelta.jpg) | ![Snyk Clean](snyk.jpg) |
+| *Vulnerabilidad CWE-200 detectada por Snyk Code* | *Historial de Snyk mostrando 0 vulnerabilidades* |
+
+**🔍 Proceso de resolución:**
+1. ✅ **Detección** - Snyk identificó la exposición del header X-Powered-By
+2. ✅ **Implementación** - Agregamos `app.disable('x-powered-by')` en el código
+3. ✅ **Verificación** - Snyk confirma que no hay vulnerabilidades restantes
 
 ### 🔒 Medidas de seguridad aplicadas
 
