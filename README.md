@@ -3,7 +3,8 @@
 ![Security](https://img.shields.io/badge/Security-0%20vulnerabilities-brightgreen?style=flat-square&logo=shield)
 ![Snyk](https://img.shields.io/badge/Snyk-Monitored-4C4A73?style=flat-square&logo=snyk)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-brightgreen?style=flat-square&logo=node.js)
-![Status](https://img.shields.io/badge/Status-Production-success?style=flat-square)
+![API Status](https://img.shields.io/website?down_color=red&down_message=offline&style=flat-square&up_color=green&up_message=online&url=https%3A%2F%2Fnew-api-5g3h.onrender.com)
+![Render](https://img.shields.io/badge/Deploy-Render-46E3B7?style=flat-square&logo=render)
 
 Esta es una API básica desarrollada con **Node.js** y **Express**, desplegada en [Render.com](https://render.com).  
 Sirve como ejemplo para iniciar proyectos backend, comprender la estructura de una API REST y cómo hacer un despliegue gratuito en la nube.
@@ -15,7 +16,26 @@ Sirve como ejemplo para iniciar proyectos backend, comprender la estructura de u
 ## 🚀 Enlace en producción
 🔗 **API URL:** [https://new-api-5g3h.onrender.com](https://new-api-5g3h.onrender.com)
 
-Puedes probar la API en tu navegador o desde Postman / cURL.
+⚠️ **Nota sobre Render (Plan Gratuito):**
+- El servicio puede tardar **30-60 segundos** en despertar si ha estado inactivo
+- Si no responde, espera un momento y recarga la página
+- Las apps gratuitas se duermen después de 15 minutos de inactividad
+
+### 🧪 Endpoints para probar:
+
+| Endpoint | URL Completa | Descripción |
+|----------|--------------|-------------|
+| **Mensaje principal** | [/](https://new-api-5g3h.onrender.com/) | Saludo de la API |
+| **Lista de usuarios** | [/usuarios](https://new-api-5g3h.onrender.com/usuarios) | JSON con datos simulados |
+
+**Alternativamente, usa cURL:**
+```bash
+# Endpoint principal
+curl https://new-api-5g3h.onrender.com/
+
+# Endpoint de usuarios
+curl https://new-api-5g3h.onrender.com/usuarios
+```
 
 ---
 
@@ -58,6 +78,26 @@ Puedes probar la API en tu navegador o desde Postman / cURL.
    ```
 
 El servidor se iniciará en: **http://localhost:3000**
+
+---
+
+## 🔧 Solución de problemas
+
+### 🌐 Si la API en Render no responde:
+
+1. **Espera 30-60 segundos** - El servicio gratuito puede estar "dormido"
+2. **Recarga la página** varias veces
+3. **Verifica el badge de estado** arriba (🟢 online / 🔴 offline)
+4. **Ejecuta localmente** siguiendo las instrucciones anteriores
+
+### 🔍 Verificar estado manualmente:
+```bash
+# Test de conectividad
+ping new-api-5g3h.onrender.com
+
+# Test HTTP
+curl -I https://new-api-5g3h.onrender.com/
+```
 
 ---
 
